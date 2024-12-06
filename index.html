@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Readers' Corner</title>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+  <!-- all cdn (link) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  
+  <!-- loader -->
+  <div class="loader"></div>
+  
+  <!-- content -->
+  <main class="content">
+    <!-- navigation -->
+    <div class="navbar">
+      <h2>Readers' <span>Corner</span></h2>
+      
+      <nav id="topnav">
+        <ul>
+          <li><a href="#home" class="navlink">Home</a></li>
+          <li><a href="#about" class="navlink">About</a></li>
+          <li><a href="#favorite" class="navlink">Favorite</a></li>
+          <li><a href="#contact" class="navlink">Contact</a></li>
+          <div class="navbar-btn">
+            <button>Login</button>
+          </div>
+        </ul>
+      </nav>
+      <div class="navbar-icon">
+        <i class="fa-solid fa-user" id="user"></i>
+        <i class="fa-solid fa-bars" id="menu"></i>
+      </div>
+    </div>
+    
+    <!-- section - home -->
+    <div class="header-home">
+      <section id="home">
+        <div class="main-home">
+          <div class="home-text" data-aos="fade" data-aos-duration="3000" data-aos-delay="200">
+            <h3>Welcome to <span>Readers' Corner</span> — A Hub for Book Enthusiasts</h3>
+          </div>
+          <div class="home-btn" data-aos="fade" data-aos-duration="3000" data-aos-delay="200">
+            <button>Favorite Books <i class="fa-solid fa-arrow-right"></i></button>
+            <button>Get Started <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <!-- section - about -->
+    <section id="about">
+      <h2 data-aos="slide-down" data-aos-duration="1000" data-aos-delay="200">About</h2>
+      <div class="main-about">
+        <div class="about-text" data-aos="slide-right" data-aos-duration="2000" data-aos-delay="200">
+          <b>Personal Information</b>
+          <p>— Hi, I'm Arah Antoneth P. Viloria and i am 16 years old, I am Grade 11 student from San Antonio National Agro Industry and Vocational High School</p>
+          <b>Why I Love Reading</b>
+          <p>— I love reading bcoz reading expands my understanding of life in so many ways. It introduces me to people from different cultures and backgrounds, allowing me to emphatize with their experiences and broaden my world view.</p>
+        </div>
+        <div class="quote-text" data-aos="slide-right" data-aos-duration="2000" data-aos-delay="200">
+          <b>Inspiring Quotes</b>
+          <p>— A reader lives a thousand lives before he dies. The man who never reads lives only one.</p>
+          <ul>
+            <li>George R.R. Martin</li>
+            <li>A dance with dragons</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- section - favorite -->
+    <section id="favorite">
+      <h2 data-aos="slide-down" data-aos-duration="1000" data-aos-delay="200">Favorite</h2>
+      <div class="main-favorite">
+        <div class="favorite-book" data-aos="slide-right" data-aos-duration="2000" data-aos-delay="200">
+          <div class="book-img">
+            <img src="b1.jpeg" alt="book1">
+          </div>
+          <div class="book-description">
+            <b>Dosage of Serotonin</b>
+            <p>Refers to the levels of serotonin, a neurotransmitter, regulated through medications like SSRIs to treat mood disorders such as depression and anxiety.</p>
+          </div>
+        </div>
+        
+        <div class="favorite-book" data-aos="slide-right" data-aos-duration="2000" data-aos-delay="300">
+          <div class="book-img">
+            <img src="b2.jpeg" alt="book1">
+          </div>
+          <div class="book-description">
+            <b>The Rain in España</b>
+            <p>The Rain in España is a romance about college students Kalix and Luna, navigating love and growth.</p>
+          </div>
+        </div>
+        
+        <div class="favorite-book" data-aos="slide-right" data-aos-duration="2000" data-aos-delay="400">
+          <div class="book-img">
+            <img src="b3.jpeg" alt="book1">
+          </div>
+          <div class="book-description">
+            <b>Chasing in the Wild</b>
+            <p>Chasing the Wild is an adventurous tale of self-discovery, courage, and connection with nature.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- section - contact -->
+    <section id="contact">
+      <h2 data-aos="slide-down" data-aos-duration="1000" data-aos-delay="200">Get in Touch</h2>
+      <div class="main-contact" data-aos="fade" data-aos-duration="2000" data-aos-delay="200">
+        <div class="contact-text">
+          <h4>Have a question?<br/>
+          Reach out to us and we'll respond as soon as possible.</h4>
+        </div>
+        <div class="contact-fields">
+          <input type="text" id="name" placeholder="Full name">
+          <input type="email" id="email" placeholder="Email">
+          <input type="password" id="password" placeholder="Password">
+          <textarea rows="10" cols="30" id="message" placeholder="Message"></textarea>
+          <div class="contact-btn">
+            <button onclick="submit()">Send</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- footer -->
+    <div class="footer">
+      <div class="footer-text">
+        <p>Readers' Corner | 2024 - 2025 ©</p>
+      </div>
+      <div class="footer-icon">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+    </div>
+    
+    <!-- button to top -->
+    <button id="top" onclick="topToButton()"><i class="fa-solid fa-arrow-up"></i></button>
+  </main>
+  
+  <!-- all cdn (script) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- javascript -->
+  <script src="script.js"></script>
+  
+</body>
+</html>
